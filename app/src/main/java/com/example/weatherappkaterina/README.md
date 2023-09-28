@@ -1,6 +1,6 @@
 # Weather app
-Weather app is an application that shows the weather of your current city 
-by getting your current location
+Weather app is an application that shows the weather by getting your current
+location
 
 ## Api
 * [OpenWeatherMap](https://openweathermap.org/api)
