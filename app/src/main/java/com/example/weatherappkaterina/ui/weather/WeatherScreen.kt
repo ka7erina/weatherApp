@@ -12,8 +12,10 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.example.weatherappkaterina.R
 import com.example.weatherappkaterina.ui.components.ProgressBarComponent
 import com.example.weatherappkaterina.ui.components.WeatherComponent
 
@@ -32,11 +34,11 @@ fun WeatherScreen(
         }
 
         is WeatherState.Success -> {
-              (weatherState.value as WeatherState.Success).weather?.let {
-                  WeatherComponent(
-                      weather = it
-                  )
-              }
+            (weatherState.value as WeatherState.Success).weather?.let {
+                WeatherComponent(
+                    weather = it
+                )
+            }
         }
 
         is WeatherState.Error -> {
@@ -46,7 +48,7 @@ fun WeatherScreen(
                     .width(150.dp)
                     .height(150.dp)
                     .wrapContentHeight(),
-                text = "Oops, something went wrong. Please try again later."
+                text = stringResource(R.string.something_went_wrong)
             )
         }
     }
