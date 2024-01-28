@@ -8,6 +8,5 @@
     <string name="gps_disabled">GPS is disabled.</string>
     <string name="permission_not_granted">Permission not granted</string>
 
-    <string name="error_fetching_weather">Error fetching weather</string>
     <string name="something_went_wrong">Oops, something went wrong. Please try again later.</string>
 </resources>

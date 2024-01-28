@@ -4,5 +4,5 @@ import com.example.weatherappkaterina.domain.location.LocationTracker
 import javax.inject.Inject
 
 class GetLocationUseCase @Inject constructor(private val locationTracker: LocationTracker) {
-    suspend fun getLocation() = locationTracker.getCurrentLocation()
+    suspend operator fun invoke() = locationTracker.getCurrentLocation()
 }

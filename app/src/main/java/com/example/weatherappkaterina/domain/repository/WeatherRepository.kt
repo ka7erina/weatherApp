@@ -1,6 +1,6 @@
 package com.example.weatherappkaterina.domain.repository
 
-import com.example.weatherappkaterina.core.WeatherResult
+import com.example.weatherappkaterina.domain.model.WeatherResult
 import kotlinx.coroutines.flow.Flow
 
 interface WeatherRepository {
