@@ -22,7 +22,7 @@ class WeatherRepositoryImpl @Inject constructor(
         } catch (e: HttpException) {
             emit(WeatherResult.Error(e.message ?: "An unexpected error occurred. Please try again later"))
         } catch (e: IOException) {
-            emit(WeatherResult.Error(e.message ?: "Couldn't reach server. Check your internet connection."))
+            emit(WeatherResult.Error(e.message ?: "Couldn't reach server. Check your internet connection"))
         }
     }
 }
