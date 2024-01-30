@@ -8,5 +8,5 @@ import kotlinx.coroutines.flow.Flow
 class GetWeatherUseCase @Inject constructor(
     private val weatherRepository: WeatherRepository
 ) {
-    suspend operator fun invoke(lat: String, lon: String): Flow<WeatherResult> = weatherRepository.getWeather(lat, lon)
+    operator fun invoke(lat: String, lon: String): Flow<WeatherResult> = weatherRepository.getWeather(lat, lon)
 }

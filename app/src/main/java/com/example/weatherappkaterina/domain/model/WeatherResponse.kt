@@ -5,3 +5,5 @@ data class WeatherResponse(
     val name: String,
     val weather: List<Weather>
 )
+
+fun WeatherResponse.mapToWeatherData(): WeatherData = WeatherData()

@@ -12,7 +12,7 @@ class WeatherRepositoryImpl @Inject constructor(
     private val apiService: ApiService
 ) : WeatherRepository {
 
-    override suspend fun getWeather(lat: String, lon: String) = flow {
+    override fun getWeather(lat: String, lon: String) = flow {
         try {
             val response = apiService.getWeather(lat, lon)
             if (response.isSuccessful) {
