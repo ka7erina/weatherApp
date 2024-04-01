@@ -36,15 +36,10 @@ class WeatherViewModel @Inject constructor(
     }
 
     private suspend fun getWeather(lat: String, lon: String) {
-        getWeatherUseCase(lat, lon).collectLatest {
+        getWeatherUseCase(lat, lon).collect {
             when (it) {
-                is WeatherResult.Success -> {
-                    _weatherState.value = WeatherState.Success(it.data)
-                }
-
-                is WeatherResult.Error -> {
-                    _weatherState.value = WeatherState.Error
-                }
+                is WeatherResult.Success -> _weatherState.value = WeatherState.Success(it.data)
+                is WeatherResult.Error -> _weatherState.value = WeatherState.Error
             }
         }
     }
