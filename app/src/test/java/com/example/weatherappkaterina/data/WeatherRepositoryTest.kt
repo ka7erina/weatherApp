@@ -37,11 +37,10 @@ class WeatherRepositoryImplTest {
         val lat = "37.7749"
         val lon = "-122.4194"
         val httpException: HttpException = mock()
-        `when`(httpException.message()).thenReturn("HTTP error")
         `when`(apiService.getWeather(lat, lon)).thenThrow(httpException)
 
         val expected = weatherRepository.getWeather(lat, lon).first()
-        assertEquals(expected, WeatherResult.Error("HTTP error"))
+        assertEquals(expected, WeatherResult.Error("An unexpected error occurred. Please try again later"))
     }
 
     @Test
