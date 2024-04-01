@@ -1,12 +1,11 @@
 <resources>
     <string name="app_name">WeatherAppKaterina</string>
 
-    <string name="current_temperature">Current temperature: %1$s</string>
     <string name="feels_like">Feels like: %1$s</string>
-    <string name="hign_temp_low_temp">H%1$s   L%2$s</string>
+    <string name="hign_temp_low_temp">H%1$s  -  L%2$s</string>
 
     <string name="gps_disabled">GPS is disabled.</string>
     <string name="permission_not_granted">Permission not granted</string>
 
-    <string name="something_went_wrong">Oops, something went wrong. Please try again later.</string>
+    <string name="something_went_wrong">Oops, something went wrong. Please try again later!</string>
 </resources>
