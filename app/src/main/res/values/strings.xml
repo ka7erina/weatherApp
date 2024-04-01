@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">WeatherAppKaterina</string>
 
-    <string name="feels_like">Feels like: %1$s</string>
+    <string name="feels_like">Feels like %1$s</string>
     <string name="hign_temp_low_temp">H%1$s  -  L%2$s</string>
 
     <string name="gps_disabled">GPS is disabled.</string>

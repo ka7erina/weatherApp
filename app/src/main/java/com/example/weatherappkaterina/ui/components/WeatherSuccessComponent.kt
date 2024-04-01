@@ -47,15 +47,3 @@ fun WeatherSuccessComponent(
         )
     }
 }
-
-@Preview(showBackground = true)
-@Composable
-fun WeatherSuccessComponentPreview() {
-    WeatherSuccessComponent(
-        weather = WeatherData(
-            main = Main(),
-            name = "Name",
-            weather = listOf(Weather(description = "some description"))
-        )
-    )
-}
