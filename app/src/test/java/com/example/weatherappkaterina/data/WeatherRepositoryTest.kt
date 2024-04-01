@@ -2,7 +2,7 @@ package com.example.weatherappkaterina.data
 
 import com.example.weatherappkaterina.data.api.ApiService
 import com.example.weatherappkaterina.data.repository.WeatherRepositoryImpl
-import com.example.weatherappkaterina.domain.model.WeatherResponse
+import com.example.weatherappkaterina.domain.model.WeatherData
 import com.example.weatherappkaterina.domain.model.WeatherResult
 import java.io.IOException
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -25,7 +25,7 @@ class WeatherRepositoryImplTest {
     fun `when getWeather is called then return success`() = runTest {
         val lat = "37.7749"
         val lon = "-122.4194"
-        val response: Response<WeatherResponse> = mock()
+        val response: Response<WeatherData> = mock()
         `when`(apiService.getWeather(lat, lon)).thenReturn(response)
 
         val expected = weatherRepository.getWeather(lat, lon).first()

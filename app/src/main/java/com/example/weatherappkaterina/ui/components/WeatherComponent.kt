@@ -13,12 +13,12 @@ import androidx.compose.ui.unit.sp
 import com.example.weatherappkaterina.R
 import com.example.weatherappkaterina.domain.model.Main
 import com.example.weatherappkaterina.domain.model.Weather
-import com.example.weatherappkaterina.domain.model.WeatherResponse
+import com.example.weatherappkaterina.domain.model.WeatherData
 
 @Composable
 fun WeatherComponent(
     modifier: Modifier = Modifier,
-    weather: WeatherResponse
+    weather: WeatherData
 ) {
     Column(
         modifier = modifier.fillMaxSize(),
@@ -43,7 +43,7 @@ fun WeatherComponent(
 @Composable
 fun WeatherComponentPreview() {
     WeatherComponent(
-        weather = WeatherResponse(
+        weather = WeatherData(
             main = Main(),
             name = "Name",
             weather = listOf(Weather(description = "description"))

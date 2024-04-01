@@ -12,11 +12,7 @@ fun WeatherScreen(
 ) {
     when (val state = weatherViewModel.weatherState.collectAsState().value) {
         is WeatherState.Loading -> ProgressBarComponent()
-        is WeatherState.Success ->
-            WeatherComponent(
-                weather = state.weather
-            )
+        is WeatherState.Success -> WeatherComponent(weather = state.weather)
         is WeatherState.Error -> ErrorMessageComponent()
-
     }
 }

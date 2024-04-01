@@ -3,7 +3,7 @@ package com.example.weatherappkaterina.domain.usecase
 import android.location.Location
 import com.example.weatherappkaterina.domain.model.Main
 import com.example.weatherappkaterina.domain.model.Weather
-import com.example.weatherappkaterina.domain.model.WeatherResponse
+import com.example.weatherappkaterina.domain.model.WeatherData
 import com.example.weatherappkaterina.domain.model.WeatherResult
 import com.example.weatherappkaterina.domain.repository.WeatherRepository
 import kotlinx.coroutines.flow.flowOf
@@ -24,7 +24,7 @@ class GetWeatherUseCaseTest {
         val location: Location = mock()
         location.latitude = 37.442
         location.longitude = 45.144
-        val weather = WeatherResponse(
+        val weather = WeatherData(
             name = "Mountain View", main = Main(
                 feelsLike = 298.74, temp = 272.1, tempMin = 297.56, tempMax = 300.05
             ), weather = listOf(

@@ -1,6 +1,6 @@
 package com.example.weatherappkaterina.data.api
 
-import com.example.weatherappkaterina.domain.model.WeatherResponse
+import com.example.weatherappkaterina.domain.model.WeatherData
 import com.example.weatherappkaterina.core.API_KEY
 import com.example.weatherappkaterina.core.UNITS
 import retrofit2.Response
@@ -15,5 +15,5 @@ interface ApiService {
         @Query("lon") lon: String,
         @Query("units") units: String = UNITS,
         @Query("appid") id: String = API_KEY,
-        ): Response<WeatherResponse>
+        ): Response<WeatherData>
 }
